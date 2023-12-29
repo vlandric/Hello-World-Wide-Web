@@ -23,15 +23,58 @@ img {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* A subtle shadow */
     border-radius: 8px; /* Rounded corners */
 }
-@media (max-width: 600px) {
-    .container {
-        width: 95%; /* Wider container for small screens */
-        padding: 10px; /* Less padding */
+
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.image-item {
+    flex: 1 1 300px; /* adjust min-width as needed */
+    cursor: pointer; /* optional, for visual cue on hover */
+}
+
+.image-item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease; /* for a zoom effect on hover */
+}
+
+.image-item:hover img {
+    transform: scale(1.05); /* optional, zoom effect on hover */
+}
+
+@media (max-width: 600px) { /* adjust breakpoint as needed */
+    .image-gallery {
+        flex-direction: column;
     }
-    h1 {
-        font-size: 24px; /* Smaller font size for h1 */
-    }
-    p {
-        font-size: 18px; /* Smaller font size for paragraph */
-    }
+}
+
+/* Fullscreen image view when clicked */
+.fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s;
+}
+
+.fullscreen img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.fullscreen.active {
+    visibility: visible;
+    opacity: 1;
 }
