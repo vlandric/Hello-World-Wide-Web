@@ -91,11 +91,30 @@ p {
     background: url('../images/background.png') no-repeat center center; 
     background-size: cover;
 }
-
+/* 
 .main-title {
 	
     font-size: 10em;
     font-weight: bold;
     color: #333;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+} */
+
+.main-title {
+    font-size: 8em; /* Large font size for larger screens */
+    font-weight: bold;
+    color: #333;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin: 0; /* Remove default margin */
+    padding: 20px; /* Add padding to prevent text cutoff */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 4em; /* Smaller font size for mobile devices */
+    }
+    .main-content {
+        padding: 20px; /* Add padding for smaller screens */
+    }
 }
