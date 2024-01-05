@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Hello World Wide Web</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a  href="index.html" class="nav-logo">andric.ba</a>
+        <div class="nav-links">
+            <a href="home_network.html" class="nav-item">Home Network</a>
+            
+        </div>
+    </nav>
+    <div class="container">
+        <h1>Hello World Wide Web</h1>
+        <p>This webpage is hosted on a Raspberry Pi Kubernetes cluster. It's only purpose is to use it as the showcase for the underlying infrastructure, rather than being the main focus itself</p>
+		<p>The code for this site is hosted on GitHub, and every new commit triggers a Jenkins pipeline, which in turn rolls out an updated containerized application.</p>
+		<p>The cluster's case is 3D-printed. I downloaded the design from <a href="https://www.thingiverse.com/thing:3349047" target="_blank">Thingiverse</a>.</p>
+        <p>This Raspberry Pi setup includes two units with 4 GB of RAM each, and a third unit equipped with 8 GB of RAM. This configuration provides a robust foundation for the cluster.</p>
+        <p>This is just the start. I am in the process of developing a comprehensive home lab. The future setup will include a network switch, access points, a patch panel, NAS, and an uninterruptible power supply (UPS), all organized within a 19" rack. This small project reflects my passion for technology and continuous learning.</p>        
+        <div class="image-gallery">
+            <div class="image-item">
+                <img src="images/K3s-cluster-1.jpg" alt="K3s Cluster">
+            </div>
+            <div class="image-item">
+                <img src="images/K3s-cluster-2.jpg" alt="K3s Cluster">
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional: JavaScript for the click-to-enlarge feature -->
+    <script src="js/script.js"></script>
+</body>
+</html>
